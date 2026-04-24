@@ -1,0 +1,19 @@
+name = "deeptoken-fit-api"
+main = "index.js"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+DEEPSEEK_API_KEY = "your-deepseek-api-key-here"
+
+# Workers Plus plan features (optional, for KV access)
+# kv_namespaces = []
+
+# Environment-specific config
+[env.production]
+name = "deeptoken-fit-api"
+route = "api.dptoken.fit/*"
+
+[env.staging]
+name = "deeptoken-fit-api-staging"
+route = "api-staging.dptoken.fit/*"
